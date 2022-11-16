@@ -1,4 +1,5 @@
-// Define the variables
+
+// Grabbibng all elements necessary
 let buttons = document.querySelectorAll('button');
 let previousOperand = document.querySelector('[data-previous-operand]');
 let currentOperand = document.querySelector('[data-current-operand]');
@@ -15,14 +16,14 @@ clear.addEventListener('click', (e) => {
     opPh.textContent = '';
 })
 
-// Add value to array and the screen
+// Append numbers to the currentOperand HTML element
 operand.forEach((button) => {
     button.addEventListener('click', (e) => {
         currentOperand.textContent = currentOperand.textContent + '' + e.target.value;
     });
 })
 
-// Take operator and move to previous operand
+// Collect operand & operand and move them to the previous operand html element
 operator.forEach((button) => {
   button.addEventListener('click', (e) => {
     previousOperand.textContent = currentOperand.textContent;
@@ -32,7 +33,7 @@ operator.forEach((button) => {
   })
 })
 
-// Calculate using the HTML of previous/current/operator elements
+// Calculate using (previousOperand) operator (currentOperand) 
 equals.addEventListener('click', (e) => {
 let parsePrev = parseFloat(previousOperand.textContent);
 let parseCur = parseFloat(currentOperand.textContent);
