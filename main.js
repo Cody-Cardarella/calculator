@@ -9,7 +9,7 @@ let operand = document.querySelectorAll("button[data-type=operand]");
 let operator = document.querySelectorAll("button[data-type=operator]");
 let opPh = document.querySelector('.operatorPlaceholder');
 
-// Clear the array on click
+// Clear the textboxes
 clear.addEventListener('click', (e) => {
     currentOperand.textContent = '';
     previousOperand.textContent = '';
